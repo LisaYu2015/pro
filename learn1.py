@@ -12,7 +12,7 @@ def repli_count(input_list):
     return repl_dic
 
 def eliminate_single(input_dic):
-    for i in input_dic:
+    for i in list(input_dic):
         if input_dic[i] == 1:
             del input_dic[i]
     return input_dic
@@ -21,3 +21,5 @@ new_dic = repli_count(new_ls)
 print(new_dic)
 replic_dic = eliminate_single(new_dic)
 print(replic_dic)
+
+
