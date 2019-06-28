@@ -23,3 +23,12 @@ replic_dic = eliminate_single(new_dic)
 print(replic_dic)
 
 
+
+"""
+output all possible reorderings of a list
+"""
+
+new_str2 = "abcdefg"
+new_ls2= list(new_str2)
+print(new_ls2)
+ 
