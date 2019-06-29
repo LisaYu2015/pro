@@ -1,0 +1,11 @@
+def prime_K(K):
+    i = 2
+    prime_ls = []
+    for divisor in range(2, i):
+        if i % divisor == 0:
+            prime_ls.append(i)
+            i += 1
+            len_prime_list = len(prime_ls)
+            if len_prime_list == K:
+                break
+print(prime_K(10))
