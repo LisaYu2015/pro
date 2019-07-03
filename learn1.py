@@ -83,21 +83,37 @@ def reordering_ls(input_ls):
 
 
 """
-
-def triangle(x):
+"""
+def pattern_str(input_str):
     output_str = ""
-    line = ""
-    for line_num in range(1, x):
-        empty_space = " " * int(((x - line_num)/2))
-        line = empty_space + "x" * line_num + empty_space + "\n"
-        output_str += line 
-    for i in range(1, len(line)-1):
-        if line[i-1] == line[i+1]:
-            line.replace(line[i], "*")
-        else:
-            line.replace(line[i], "x")
-       
+    for i in range(1, len(input_str)-1):
+            if input_str[i-1] == input_str[i+1]:
+                output_str += " "
+            elif input_str[i-1] != input_str[i+1] and input_str[i+1] != "\n":
+                output_str += "*"   
+            else:
+                output_str += "\n"   
     return output_str
 
-print(triangle(57))
+def triangle(edge_len):
+    empty_space = " " * int((edge_len-1)/2)
+    line = empty_space + "*" + empty_space + "\n"
+    len_triangle = len(line)
+    for len_triangle in range(0,edge_len * edge_len):
+        line += pattern_str(line) 
+    return line
 
+print(triangle(10))
+"""
+
+def pattern_str(edge_len):
+    empty_space = " " * int((edge_len-1)/2)
+    line = empty_space + "*" + empty_space + "\n"
+    for i in range(edge_len +1, :
+            if line[i-1] == line[i+1]:
+                line += " "
+            elif line[i-1] != line[i+1]:
+                line += "*"   
+            else:
+                line += "\n"   
+    return output_str
