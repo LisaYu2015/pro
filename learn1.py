@@ -98,22 +98,27 @@ def pattern_str(input_str):
 def triangle(edge_len):
     empty_space = " " * int((edge_len-1)/2)
     line = empty_space + "*" + empty_space + "\n"
-    len_triangle = len(line)
-    for len_triangle in range(0,edge_len * edge_len):
+    for len_triangle in range(edge_len,edge_len * edge_len):
+        if len_triangle < 
         line += pattern_str(line) 
     return line
 
 print(triangle(10))
-"""
 
+"""
 def pattern_str(edge_len):
     empty_space = " " * int((edge_len-1)/2)
     line = empty_space + "*" + empty_space + "\n"
-    for i in range(edge_len +1, :
-            if line[i-1] == line[i+1]:
-                line += " "
-            elif line[i-1] != line[i+1]:
-                line += "*"   
-            else:
+    for i in range(edge_len +2, edge_len * edge_len+1):
+        if i % edge_len == 2 or i % edge_len == 0:
+            line += " "
+        elif i % edge_len == 1 :
                 line += "\n"   
-    return output_str
+        else:
+            if line[i-(edge_len+1)-1] ==line[i-(edge_len+1)+1]:
+                line += " "
+            else: 
+                line += "*"   
+    return line
+
+print(pattern_str(29))
