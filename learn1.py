@@ -106,6 +106,7 @@ def triangle(edge_len):
 print(triangle(10))
 
 """
+"""
 def pattern_str(edge_len):
     empty_space = " " * int((edge_len-1)/2)
     line = empty_space + "*" + empty_space + "\n"
@@ -121,4 +122,25 @@ def pattern_str(edge_len):
                 line += "*"   
     return line
 
-print(pattern_str(29))
+print(pattern_str(50))
+"""
+
+"first you create an empty array"
+
+def S_triangle(w):
+    empty_space = " " * int((w-1)/2)
+    first_line = empty_space + "*" + empty_space
+    last_line = "*" * w
+    h =  sqrt(w * w - w/2 * w/2)
+    base_array = [list(first_line), list(last_line)]
+    for i in range(1, (h-2+1):
+        for j in base_array[i]:
+            new_line = 
+            base_array[i] = 
+            base_array.insert(i, new_list)
+    return base_array
+
+
+
+
+
